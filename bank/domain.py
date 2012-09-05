@@ -23,4 +23,10 @@ class Account(object):
         self.clearing_number = clearing_number
     
 class Transaction(object):
-    pass
+    ''' A transaction
+    '''
+    
+    def __init__(self, message, amount, timestamp):
+        self.message = message
+        self.amount = amount
+        self.timestamp = timestamp

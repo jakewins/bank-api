@@ -4,6 +4,8 @@ from urllib import urlencode
 import json
 
 class HttpJsonClient(object):
+    ''' A dead simple http client for talking to REST-like services that speak JSON.
+    '''
     
     def __init__(self, base_url):
         self.base_url = base_url
@@ -48,7 +50,7 @@ class HttpJsonClient(object):
     			headers = headers,
     			body = json.dumps(post_args))
 
-    	# error checking
+    	# error checking (super naive right now, but good enough. Expand when necessary)
     	if response.status == 401:
     		raise Exception("Unauthorized: " + str(response))
     	if response.status != 200:

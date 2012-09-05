@@ -37,17 +37,14 @@ class LFABAccount(Account):
         self.balance = balance
         self._ledger = ledger
         
+        
 class LFABTransaction(Transaction):
 
     @classmethod
     def from_map(cls, data):
         # Note timestamp is in milliseconds, and yes, their serialization actually contains spelling errors
         return cls(data['text'], data['ammount'], datetime.fromtimestamp(data['transactiondate'] / 1000)) 
-
-    def __init__(self, message, amount, timestamp):
-        self.message = message
-        self.amount = amount
-        self.timestamp = timestamp
+        
 
 class LFABSession(FinancialSession):
     
@@ -68,7 +65,7 @@ class LFABSession(FinancialSession):
         
         # Set up session token header
         self._client.add_persistent_header('Ctoken', session_token['token'])
-        self._client.add_persistent_header('DeviceId', '1a1805054248c4529340f4ee20bb1d1ec200a0b9')
+        self._client.add_persistent_header('DeviceId', '1a1805054248c4529340f4ee20bb1d1ec200a0b9') # TODO: Use a randomized ID instead? 
         
         # Log in
         login_response = self._client.post('/security/user', {"ssn":self._ssn,"pin":self._pin})
