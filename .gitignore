@@ -1,0 +1,6 @@
+
+build/
+dist/
+scad_spam.egg-info/
+*.pyc
+*.egg-info/
