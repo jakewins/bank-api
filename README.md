@@ -32,7 +32,7 @@ For detailed usage, please just read the source, it's python for christ sake.
     
     for account in session.get_accounts():
         # Each account is a subclass of bank.domain.Account
-        for transaction in session.get_transactions():
+        for transaction in session.get_transactions(account):
             # Each transaction is a subclass of bank.domain.Transaction
             print transaction
     
