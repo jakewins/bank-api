@@ -45,18 +45,16 @@ Well, you should be, there is a real danger in this. It isn't what you think tho
 That is not dangerous, because you can never stop people from writing code that accesses your services. 
 If it can be accessed by a human through a browser, it can be accessed by a program through a browser.
 
-No, bad people is not the danger. The danger is good people, writing good services, and *you* forcing them to use these APIs.  
-That is really bad, because that means your customers learn to hand out their pin codes and other login credentials to third party services. 
+The danger is good people, writing good services, and *you* forcing them to use these APIs.  
+*That* is bad, because that means your customers learn to hand out their login credentials to third party services. 
 
-*Then* bad people will be dangerous, because now your users are not as cautious with their credentials anymore. 
-That makes phishing a much more significant threat, as well as security holes in third party services.
+*Then* bad people will be dangerous, because now your users have been trained to think handing out credentials to third parties is fine. 
+That makes phishing a much more significant threat, not to mention security holes in third party services that end up storing these credentials.
 
 We can avoid this. 
 
-Please, design a publicly documented API that uses *your* service to provide authentication, using something like OAuth.
-Third parties can build services that enrich the experience of using your bank, and your users learn to never give out credentials
-to anyone but you. 
-The security model remains intact in your hands, and third parties use a safe sandbox provided by you.
+Please, design a publicly documented API that uses *your* service to provide authentication, use something like OAuth, it's built for that.
+Third parties can build services that enrich your customer experience, and your customers learn to never give out credentials to anyone but you. 
 
 Third party solutions are happening, whether you want to or not. You can choose to fight it, or you can choose to embrace it.
 For the sake of your customers, embrace it. 
