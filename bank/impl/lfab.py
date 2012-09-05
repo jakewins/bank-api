@@ -1,4 +1,5 @@
-''' FinancialSession implementation for Swedish Länsförsäkringar Bank.
+# Encoding: UTF-8
+''' FinancialSession implementation for Swedish Lansforsakringar Bank.
 
 Uses LFABs REST API, based on Björn Sållarps work, with updated client key. 
 
